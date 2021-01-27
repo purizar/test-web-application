@@ -1,19 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>from JSP</title>
-
-</head>
-<body>
-
-<p><font color="red">${errorMessage}</font></p>
-	<form action="/login.do" method="POST">
-		Name : <input name="name" type="text" /> 
-		Password : <input name="password" type="password" /> <input type="submit" />
+<%@ include file="common/header.jspf"%>
+<div class="container">
+	<p>
+		<font color="red">${errorMessage}</font>
+	</p>
+	<form action="/login" method="POST">
+		<fieldset class="form-group">
+			<label>Name</label> <input name="name" type="text"
+				class="form-control" />
+		</fieldset>
+		<fieldset class="form-group">
+			<label>Password</label> <input name="password" type="password"
+				class="form-control" />
+		</fieldset>
+		<button type="submit" class="btn btn-success">Submit</button>
 	</form>
+	<p>
+		<font color="navy">Name:paola Password:123</font>
+	</p>
+</div>
 
-</body>
-</html>
+<%@ include file="common/footer.jspf"%>
